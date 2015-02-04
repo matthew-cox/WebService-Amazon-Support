@@ -7,7 +7,6 @@ use warnings;
 
 use AWS::Signature4;
 use Carp;
-use Encode;
 use HTTP::Request::Common;
 use JSON;
 use LWP;
@@ -15,7 +14,7 @@ use Params::Validate qw( :all );
 use Readonly;
 #use Smart::Comments '###';
 #use Smart::Comments '###', '####';
-use Smart::Comments '###', '####', '#####';
+#use Smart::Comments '###', '####', '#####';
 
 =encoding utf-8
 
@@ -218,7 +217,7 @@ sub _post {
   $req->header( 'X-Amz-Target' => join( '.', $TARGET_PRE, $args{params}{Action} ) );
   $req->header( 'content-type' => 'application/x-amz-json-1.1' );
   
-  $req->content( Encode::encode_utf8( $js ) );
+  $req->content( $js );
   ### $req
 
   $self->{signer}->sign($req);
@@ -744,7 +743,7 @@ L<http://search.cpan.org/dist/WebService-Amazon-Support/>
 
 =head1 SEE ALSO
 
-perl(1), L<WebService::Simple>, L<XML::Simple>, L<HTTP::Common::Response>
+perl(1), L<AWS::Signature4>, L<Carp>, L<HTTP::Common::Response>, L<JSON>, L<LWP>, <Params::Validate>, L<WebService::Simple>
 
 =head1 LICENSE AND COPYRIGHT
 
