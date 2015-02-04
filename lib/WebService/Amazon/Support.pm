@@ -24,12 +24,12 @@ WebService::Amazon::Support - The great new WebService::Amazon::Support!
 
 =head1 VERSION
 
-Version 0.0.1
+Version 0.0.2
 
 =cut
 
 use version;
-our $VERSION = version->declare("v0.0.1");
+our $VERSION = version->declare("v0.0.2");
 
 =head1 SYNOPSIS
 

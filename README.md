@@ -4,7 +4,7 @@ WebService::Amazon::Support - The great new WebService::Amazon::Support!
 
 # VERSION
 
-Version 0.0.1
+Version 0.0.2
 
 # SYNOPSIS
 
@@ -279,7 +279,7 @@ You can also look for information at:
 
 # SEE ALSO
 
-perl(1), [WebService::Simple](https://metacpan.org/pod/WebService::Simple), [XML::Simple](https://metacpan.org/pod/XML::Simple), [HTTP::Common::Response](https://metacpan.org/pod/HTTP::Common::Response)
+perl(1), [AWS::Signature4](https://metacpan.org/pod/AWS::Signature4), [Carp](https://metacpan.org/pod/Carp), [HTTP::Common::Response](https://metacpan.org/pod/HTTP::Common::Response), [JSON](https://metacpan.org/pod/JSON), [LWP](https://metacpan.org/pod/LWP), <Params::Validate>, [WebService::Simple](https://metacpan.org/pod/WebService::Simple)
 
 # LICENSE AND COPYRIGHT
 
