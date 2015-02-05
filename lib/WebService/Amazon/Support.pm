@@ -24,12 +24,12 @@ WebService::Amazon::Support - The great new WebService::Amazon::Support!
 
 =head1 VERSION
 
-Version 0.0.2
+Version 0.0.3
 
 =cut
 
 use version;
-our $VERSION = version->declare("v0.0.2");
+our $VERSION = version->declare("v0.0.3");
 
 =head1 SYNOPSIS
 
@@ -258,8 +258,9 @@ sub _handleRepeatedOptions {
 # most of the calls can do this
 sub _genericCallHandler {
   ### Enter: (caller(0))[3]
-  my( $op ) = pop( [ split( /::/, (caller(1))[3] ) ] );
+  my( $op ) = (split( /::/, (caller(1))[3] ))[-1];
   ### Operation: $op
+
   my( $self )     = shift;
   my %params      = validate( @_, $API_SPEC{$op} );
   $params{Action} = $op;
@@ -743,7 +744,7 @@ L<http://search.cpan.org/dist/WebService-Amazon-Support/>
 
 =head1 SEE ALSO
 
-perl(1), L<AWS::Signature4>, L<Carp>, L<HTTP::Common::Response>, L<JSON>, L<LWP>, <Params::Validate>, L<WebService::Simple>
+perl(1), L<AWS::Signature4>, L<Carp>, L<HTTP::Common::Response>, L<JSON>, L<LWP>, L<Params::Validate>, L<WebService::Simple>
 
 =head1 LICENSE AND COPYRIGHT
 

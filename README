@@ -2,7 +2,7 @@ NAME
     WebService::Amazon::Support - The great new WebService::Amazon::Support!
 
 VERSION
-    Version 0.0.2
+    Version 0.0.3
 
 SYNOPSIS
     This module provides a Perl wrapper around Amazon's Support API (
@@ -276,7 +276,7 @@ SUPPORT
 ACKNOWLEDGEMENTS
 SEE ALSO
     perl(1), AWS::Signature4, Carp, HTTP::Common::Response, JSON, LWP,
-    <Params::Validate>, WebService::Simple
+    Params::Validate, WebService::Simple
 
 LICENSE AND COPYRIGHT
     Copyright 2015 Matthew Cox.
